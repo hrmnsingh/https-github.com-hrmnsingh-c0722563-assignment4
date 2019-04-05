@@ -1,4 +1,4 @@
-﻿6:17 PM
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +16,7 @@ namespace harman
         {
             Program p = new Program();
             p.Beowulf = new ArrayList();
+            p.ReadTextFiles();
         }
         public void Run()
         {
@@ -25,7 +26,7 @@ namespace harman
         public void ReadTextFiles()
         {
             //Read file using StreamReader.Reads file line by line
-            using (StreamReader file = new StreamReader("c:/area51/beowulf.txt"))
+            using (StreamReader file = new StreamReader(@"U:\Users\725563\harman.txt"))
             {
                 int counter = 0;
                 string ln;
@@ -33,6 +34,7 @@ namespace harman
                 {
                     Console.WriteLine(ln);
                     Beowulf.Add(ln);
+                    counter++;
 
                 }
                 file.Close();
