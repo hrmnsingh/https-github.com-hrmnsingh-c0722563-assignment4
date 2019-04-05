@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
+using System.IO;
 
 namespace harman
 {
@@ -33,7 +35,7 @@ namespace harman
                     Beowulf.Add(ln);
 
                 }
-                file.close();
+                file.Close();
                 Console.WriteLine($"File has{counter}lines");
             }
         }
